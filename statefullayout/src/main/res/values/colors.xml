@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="stf_retryTextColor">#00A3AD</color>
+    <color name="stf_textGray">#787F83</color>
+    <color name="stf_textDark">#002A3A</color>
+    <color name="stf_tintColor">#BFCED6</color>
+
+</resources>

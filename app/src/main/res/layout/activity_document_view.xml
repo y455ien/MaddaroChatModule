@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.intcore.statefullayout.StatefulLayout
+    android:id="@+id/stateful_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chat_module.chat.chat_internal.document_view.DocumentViewActivity">
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdfView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</com.intcore.statefullayout.StatefulLayout>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="stf_Something_went_wrong">هناك خطأ ما.</string>
+    <string name="stf_Looks_like_nothing_has_been_added_here_yet">يبدو أنه لم تتم إضافة أي شيء هنا حتى الآن.</string>
+    <string name="stf_Oops_your_connection_seems_off">عفوًا ، يبدو اتصالك بالإنترنت معطلا.</string>
+    <string name="stf_Retry">إعادة المحاولة</string>
+</resources>

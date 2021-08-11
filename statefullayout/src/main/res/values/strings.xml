@@ -1,0 +1,6 @@
+<resources>
+    <string name="stf_Something_went_wrong">Something went wrong.</string>
+    <string name="stf_Looks_like_nothing_has_been_added_here_yet">Looks like nothing has been added here yet.</string>
+    <string name="stf_Oops_your_connection_seems_off">Oops, your connection seems off.</string>
+    <string name="stf_Retry">Retry</string>
+</resources>
