@@ -133,7 +133,8 @@ public class SocketManager {
         try {
 //            String token = userPref.getAccessToken();
             JSONObject json = new JSONObject();
-            json.put("access_token", "Bearer ".concat("yassien1"));
+            json.put("access_token", userPref.getChatToken());
+//            json.put("access_token", "Bearer ".concat("yassien1"));
 
             mSocket.emit(EMIT_AUTH, json);
 

@@ -38,6 +38,8 @@ public class MyApp extends Application {
                 .applicationModule(new ApplicationModule(this))
                 .build();
 
+        applicationComponent.getUserPref().setChatToken("Bearer yassien1");
+
 //        Lingver.init(this, LocaleHelper.getLanguage(this));
 
         RxPaparazzo.register(this);

@@ -78,7 +78,7 @@ public class FileRepo extends BaseRepo {
             put("name_ar", name);
             put("name_en", name);
             put("document_categories_id", categoryID);
-            put("user_id", userPref.getId());
+//            put("user_id", userPref.getId());
             put("files", files);
         }};
 

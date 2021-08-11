@@ -51,6 +51,7 @@ public class CustomOutcomingVoiceMessageViewHolder
                         voiceMessagesListener.onMessageRequestingPlay(message);
                 });
 
+        //Todo: voice duration not returned by the backend
         tvMessageDuration.setText(ChatUtils.getHumanDurationText(message.getVoiceDuration() == null ? 0L : message.getVoiceDuration()));
     }
 }

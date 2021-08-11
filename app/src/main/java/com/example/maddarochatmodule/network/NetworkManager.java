@@ -36,10 +36,14 @@ public class NetworkManager {
 
     private final static Map<String, String> headers = new HashMap<String, String>() {{
         put("Accept", "application/json");
-        put("Authorization", "Bearer yassien1");
+//        put("Authorization", "Bearer yassien1");
     }};
 
     public void updateToken() {
+        String chatToken = userPref.getChatToken();
+        if (chatToken != null) {
+            headers.put("Authorization", chatToken);
+        }
 //        String token = userPref.getAccessToken();
 //        if (token != null)
 //            headers.put("Authorization", "Bearer ".concat(token));

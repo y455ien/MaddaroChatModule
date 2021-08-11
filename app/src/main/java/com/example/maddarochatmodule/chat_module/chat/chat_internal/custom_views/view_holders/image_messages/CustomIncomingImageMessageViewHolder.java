@@ -48,7 +48,7 @@ public class CustomIncomingImageMessageViewHolder extends MessageHolders.BaseInc
         if (context != null)
             ivMessageImage.setOnClickListener(v -> new StfalconImageViewer.Builder<>(context,
                     new String[]{message.getPhotoUrl()},
-                    (imageView, image) -> PicassoHelper.loadImageWithCache(image, imageView, PicassoHelper.CENTER_INSIDE,
+                    (imageView, image) -> PicassoHelper.loadImageWithCache("http://3.126.221.243:8080" + image, imageView, PicassoHelper.CENTER_INSIDE,
                             null, null, null)) .withBackgroundColorResource(R.color.black)
                     .withBackgroundColor(Color.parseColor("#000000")).show());
     }

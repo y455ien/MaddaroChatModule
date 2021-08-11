@@ -174,7 +174,7 @@ public class ChatInternalActivity extends BaseActivity
         currentRoom = (ChatRoomModel) getIntent().getSerializableExtra(DATA);
         if (currentRoom == null)
             return false;
-        //Todo: Needs to be changed to actuall current User Id <-------------------------------------
+        //Todo: Needs to be changed to actual current User Id <-------------------------------------
         currentBuddy = currentRoom.getOtherBuddy("6110fbe54edd90bb229684f0");
         if (currentBuddy == null)
             return false;
@@ -349,7 +349,7 @@ public class ChatInternalActivity extends BaseActivity
             viewModel.sendSeenMessage(currentRoom.getId());
 
 
-            if (!chatMessageModel.getSenderUser().getId().equals(userPref.getId()))
+            if (!chatMessageModel.getSenderUser().getId().equals(userPref.getChatToken()))
                 makeSound();
         }
     }
@@ -457,7 +457,7 @@ public class ChatInternalActivity extends BaseActivity
         super.showLoading();
         compositeDisposable.add(
                 audioPlayer.play(PlayConfig
-                        .url(message.getVoiceUrl())
+                        .url("http://3.126.221.243:8080/" + message.getVoiceUrl())
                         .streamType(AudioManager.STREAM_VOICE_CALL)
                         .looping(false)
                         .build())
