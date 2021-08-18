@@ -9,6 +9,7 @@ import javax.inject.Singleton;
 @Singleton
 public class UserPref {
 
+    public static final String KEY_USER_ID = "user_id";
     private static UserModel userModel;
     private static String accessToken;
 
@@ -24,13 +25,21 @@ public class UserPref {
 
     }
 
-    public void setChatToken(String chatToken) {
-        SharedPrefManager.getInstance().setString(KEY_CHAT_TOKEN, chatToken);
+    public void setUserId(String userId) {
+        SharedPrefManager.getInstance().setString(KEY_USER_ID, userId);
     }
 
-    public String getChatToken() {
-        return SharedPrefManager.getInstance().getString(KEY_CHAT_TOKEN);
+    public String getUserId() {
+        return SharedPrefManager.getInstance().getString(KEY_USER_ID);
     }
+
+//    public void setUserId(String userId) {
+//        SharedPrefManager.getInstance().setString(KEY_USER_ID, userId);
+//    }
+//
+//    public String getUserId() {
+//        return SharedPrefManager.getInstance().getString(KEY_USER_ID);
+//    }
 
 //    public  void setNotificationToken(String token){
 //        SharedPrefManager.getInstance().setString(KEY_NOTIFICATION_TOKEN, token);

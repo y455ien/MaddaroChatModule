@@ -19,7 +19,6 @@ import com.intcore.statefullayout.StatefulLayout;
 import com.example.maddarochatmodule.R;
 
 import java.util.List;
-import java.util.Objects;
 
 import javax.inject.Inject;
 
@@ -93,7 +92,7 @@ public class ChatRoomsFragment extends BaseFragment {
     private void setUpViews() {
         statefulLayout.setClickListener(this::getChatRooms);
 
-        adapter = new ChatRoomsAdapter("6110fbe54edd90bb229684f0", requireActivity(),
+        adapter = new ChatRoomsAdapter(userPref.getUserId(), requireActivity(),
                 model -> {
                     startActivityForResult(ChatInternalActivity.getChatInternalActivity(requireContext(), model), CHAT_REQUEST_CODE);
                     adapter.resetMessageIndicator(model.getId());

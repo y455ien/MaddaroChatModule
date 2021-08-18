@@ -38,7 +38,16 @@ public class MyApp extends Application {
                 .applicationModule(new ApplicationModule(this))
                 .build();
 
-        applicationComponent.getUserPref().setChatToken("Bearer yassien1");
+        //Intcore1
+        // Bearer intcore1
+        // 6113c7774edd90bb2296856f
+
+        //Intcore2
+        // Bearer intcore2
+        // 6113c8174edd90bb22968570
+
+        applicationComponent.getUserPref().setUserId("Bearer intcore2");
+//        applicationComponent.getUserPref().setUserId("6113c7774edd90bb2296856f");
 
 //        Lingver.init(this, LocaleHelper.getLanguage(this));
 

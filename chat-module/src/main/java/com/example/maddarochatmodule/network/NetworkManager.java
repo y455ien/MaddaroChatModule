@@ -3,7 +3,6 @@ package com.example.maddarochatmodule.network;
 
 import com.example.maddarochatmodule.cache.UserPref;
 import com.example.maddarochatmodule.data_model.ErrorModel;
-import com.example.maddarochatmodule.util.StringUtils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
@@ -40,7 +39,7 @@ public class NetworkManager {
     }};
 
     public void updateToken() {
-        String chatToken = userPref.getChatToken();
+        String chatToken = userPref.getUserId();
         if (chatToken != null) {
             headers.put("Authorization", chatToken);
         }

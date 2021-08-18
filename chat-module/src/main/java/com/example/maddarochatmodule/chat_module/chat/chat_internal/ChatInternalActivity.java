@@ -5,7 +5,6 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.media.AudioManager;
-import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.os.Environment;
 import android.text.TextUtils;
@@ -18,7 +17,6 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.devlomi.record_view.OnRecordActionListener;
-import com.example.maddarochatmodule.MyApp;
 import com.example.maddarochatmodule.R;
 import com.example.maddarochatmodule.base.BaseActivity;
 import com.example.maddarochatmodule.cache.UserPref;
@@ -175,10 +173,10 @@ public class ChatInternalActivity extends BaseActivity
         if (currentRoom == null)
             return false;
         //Todo: Needs to be changed to actual current User Id <-------------------------------------
-        currentBuddy = currentRoom.getOtherBuddy("6110fbe54edd90bb229684f0");
+        currentBuddy = currentRoom.getOtherBuddy(userPref.getUserId());
         if (currentBuddy == null)
             return false;
-        currentUser = currentRoom.getOtherBuddy("6110fbe54edd90bb229684f0");
+        currentUser = currentRoom.getOtherBuddy(currentBuddy.getId());
         return currentUser != null;
     }
 
@@ -349,7 +347,7 @@ public class ChatInternalActivity extends BaseActivity
             viewModel.sendSeenMessage(currentRoom.getId());
 
 
-            if (!chatMessageModel.getSenderUser().getId().equals(userPref.getChatToken()))
+            if (!chatMessageModel.getSenderUser().getId().equals(userPref.getUserId()))
                 makeSound();
         }
     }
